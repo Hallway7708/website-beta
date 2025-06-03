@@ -1,0 +1,238 @@
+:root {
+    --bgColor:#36013f;
+    --accentColor: #522aa5;
+    --bgColorg:#000000;
+  --font: 'Ubuntu', sans-serif;
+  --firstName: 'John';
+  --lastName: 'Doe';
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #36013f url("/assets/images/background.jpg") no-repeat fixed;
+  background-size: cover;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  padding-top: 60px;
+  text-align: center;
+  color: #fff;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  background-color: #522aa5;
+  display: flex;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+a:-webkit-any-link {
+    color: transparent;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.navbar a {
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  position: relative;
+  float: left;
+}
+
+.dropdown.dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover,.dropdown:hover.dropbtn {
+  background-color: ##7031a4;
+  box-shadow: inset 0 0 0 0 #333;
+  transition: ease-out 0.3s;
+}
+
+.dropdown-content {
+  position: absolute;
+  background-color: #d3d3d3;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  display: none;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #4b0076;
+  color: #fff;
+}
+
+.dropdown:hover.dropdown-content {
+  display: block;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+ }
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 10px #301934;
+  border-radius: 5px;
+ }
+
+::-webkit-scrollbar-thumb {
+  background: #d34dd2;
+  border-radius: 5px;
+}
+
+#notice {
+  font-family: "Jersey 25", sans-serif;
+  font-style: normal;
+  margin: 0 auto;
+}
+
+#notice h1 {
+  font-weight: 400;
+}
+
+#notice p {
+  font-weight: 400;
+}
+
+
+    #games {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 2vw;
+      justify-content: center;
+      margin-top: 0.6vw;
+      padding-bottom: 5vw;
+    }
+
+    .game-container {
+      position: relative;
+      overflow: hidden;
+      margin: 1vw;
+    }
+
+    .gameimg {
+      height: 30vw;
+      width: 30vw;
+      border-radius: 1vw;
+      cursor: pointer;
+      user-select: none;
+      transition: transform 0.2s;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .gameimg:hover {
+      transform: scale(1.01);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .title {
+      position: absolute;
+      bottom: -50px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      opacity: 0;
+      transition: opacity 0.2s, bottom 0.3s;
+      font-size: 2.5vw;
+      color: #fff;
+      text-shadow: 0 0 10px #2c7ffc;
+      text-align: center;
+      padding: 10px;
+      background-color: rgba(44, 124, 252, 0.7);
+      border-radius: 5px;
+      max-width: 80%;
+      white-space: normal;
+    }
+
+    .game-container:hover .title {
+      opacity: 1;
+      bottom: 20px;
+    }
+
+    /* Media queries for mobile and PC screens */
+    @media only screen and (max-width: 768px) {
+      #games {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .gameimg {
+        height: 40vw;
+        width: 40vw;
+      }
+      .title {
+        font-size: 3vw;
+      }
+    }
+
+    @media only screen and (min-width: 769px) {
+      #games {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .gameimg {
+        height: 20vw;
+        width: 20vw;
+      }
+      .title {
+        font-size: 2vw;
+      }
+    }
+
+    #mySearch {
+      background-color: #8E2DE2;
+      background-image: linear-gradient(120deg, #8E2DE2 0%, #4A00E0 100%);
+      border-radius: 5px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      width: 300px;
+      transition: border-color 0.3s ease;
+      margin: 0 auto;
+    }
+
+    #mySearch:focus {
+      border: 2px solid white;
+      outline: none;
+    }
+
+    #mySearch input[type="text"] {
+      background-color: transparent;
+      border: none;
+      color: white;
+      flex: 1;
+      font-size: 16px;
+    }
